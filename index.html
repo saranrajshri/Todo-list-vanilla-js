@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <title>Todo List</title>
+    <!-- Compiled and minified CSS -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </head>
+  <body style="background-color: #efefef">
+    <div class="row">
+      <div class="col s0 m4"></div>
+      <div class="col s12 m4">
+        <div class="card">
+          <div class="card-header center-align">
+            <h2 class="blue-text">Todo List</h2>
+          </div>
+
+          <p class="center-align tasks-text">Your Tasks</p>
+          <!-- List-->
+          <ul class="collection" id="myTasks"></ul>
+        </div>
+      </div>
+      <div class="col s0 m4"></div>
+
+      <!-- floating action button -->
+      <div class="fixed-action-btn">
+        <a
+          class="btn-floating btn-large red modal-trigger tooltipped"
+          href="#newTaskModal"
+          data-position="left"
+          data-tooltip="add a new task"
+        >
+          <i class="large material-icons waves-effect">add</i>
+        </a>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal" id="newTaskModal">
+        <div class="modal-content">
+          <h4>Add a new Task</h4>
+          <input type="text" placeholder="Your Task name" id="inputText" />
+          <input type="text" placeholder="Description" id="inputText1" />
+        </div>
+
+        <div class="modal-footer">
+          <a
+            href="#"
+            class="modal-close waves-effect waves-green btn-flat"
+            id="closeButton"
+            >Close</a
+          >
+          <a
+            href="#"
+            class="waves-effect waves-red btn red"
+            onclick="addNewElement()"
+            >Add Task</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+      M.AutoInit();
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>
